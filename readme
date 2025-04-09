@@ -1,0 +1,48 @@
+# Name:      Jame Dut Mathok
+
+ Index:        Number 18-CIT-060
+Department :   Information Technology
+
+## Description of African Wildlife Classification
+
+The African wildlife classification model describes the wildlife categories by organizing  the diverse animal species found across the African continent. 
+
+These models can be categories based on the following:
+
+Taxonomy: The traditional scientific classification using a hierarchical system (Kingdom, Phylum, Class, Order, Family, Genus, Species).
+Ecology: Grouping animals based on their habitat (e.g., savanna, forest, desert) and ecological roles.
+Conservation Status: Categorizing species according to their risk of extinction (e.g., vulnerable, endangered, critically endangered) which is assessed by wildlife conservation department.
+
+Human Interest: Informal classifications like the "Big Five" (lion, leopard, rhino, elephant, buffalo), initially used by hunters but now popular in tourism.
+Computer Vision: In recent years, machine learning models are being developed to automatically classify and identify African wildlife from images and videos for conservation and research purposes 
+
+
+
+
+
+
+# Special Instruction for a Wildlife Classification Model Code
+
+The provided `create_resnet` function defines a ResNet50V2-based deep learning model for classifying African wildlife. Below are the special instructions for using and modifying this model:
+
+1. **Input Shape**: Ensure that the `input_shape` parameter matches the dimensions of your input images (e.g., `(224, 224, 3)` for RGB images).
+
+2. **Pre-trained Weights**: The model uses pre-trained weights from ImageNet. This helps in transfer learning, allowing the model to leverage features learned from a large dataset.
+
+3. **Freezing Weights**: The base ResNet50V2 model's weights are frozen (`base_model.trainable = False`) to prevent them from being updated during training. If fine-tuning is required, set `base_model.trainable = True` and retrain with a lower learning rate.
+
+4. **Model Architecture**:
+   - The base ResNet50V2 model is followed by a `GlobalAveragePooling2D` layer to reduce the spatial dimensions.
+   - A dense layer with 256 units and ReLU activation is added for feature extraction.
+   - The final dense layer uses a softmax activation function to output probabilities for each class. Ensure that `len(classnames)` matches the number of wildlife categories.
+
+5. **Class Names**: Define the `classnames` variable as a list of all wildlife categories (e.g., `classnames = ['lion', 'elephant', 'zebra', ...]`).
+
+6. **Training**: Use a suitable optimizer (e.g., Adam) and loss function (e.g., `categorical_crossentropy` for multi-class classification). Ensure your dataset is preprocessed and augmented as needed.
+
+7. **Evaluation**: Evaluate the model on a validation/test set to ensure it generalizes well to unseen data.
+
+8. **Deployment**: Once trained, the model can be used for real-time classification of African wildlife from images or videos.
+
+By following these instructions, you can effectively use and adapt the `create_resnet` function for African wildlife classification tasks.
+
