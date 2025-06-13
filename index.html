@@ -1,94 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Powered Resume Analyzer</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="description" content="AI-Powered Resume Analyzer">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AI-Powered Resume Analyzer</title>
+  <link rel="icon" href="favicon.ico">
+  <!-- You can add your CSS here -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      color: #fff;
+      background: #0d1117;
+    }
+    h1, h2 {
+      color: #58a6ff;
+    }
+    p {
+      color: #c9d1d9;
+      margin-bottom: 20px;
+    }
+    .authors {
+      color: #c9d1d9;
+      margin-bottom: 20px;
+    }
+    .github-icon {
+      color: #58a6ff;
+      font-size: 30px;
+      text-decoration: none;
+      margin-bottom: 20px;
+      display: inline-block;
+    }
+    .github-icon i {
+      vertical-align: middle;
+    }
+    a {
+      color: #58a6ff;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>AI Powered Resume Analyzer</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#info">Information</a></li>
-                <li><a href="#comment">Comment</a></li>
-                <li><a href="#follow">Follow</a></li>
-                <li><a href="#resources">Resources</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section id="about">
-        <h2>About the Project</h2>
-        <p>This AI-powered resume analyzer automatically parses resumes, extracts structured information, and evaluates how well each resume matches a job description. It's built using deep learning and natural language processing to improve recruitment efficiency.</p>
-        <p>Developed with TensorFlow and integrated into a streamlined pipeline for accurate candidate-job matching.</p>
-    </section>
+  <h1>AI-Powered Resume Analyzer</h1>
+  <h2>AI Day 2025</h2>
 
-    <section id="info">
-        <h2>Information Extracted</h2>
-        <ul>
-            <li>Job Title</li>
-            <li>Candidate Highlights</li>
-            <li>Direct Skill Matches</li>
-            <li>Related Skills</li>
-            <li>Experience Alignment</li>
-            <li>Keyword Frequency Score</li>
-            <li>Overall Matching Score</li>
-        </ul>
-    </section>
+  <div class="authors">
+    <strong>Authors:</strong> James Dut, Agar Marial, Biet Puorich, Ariik Ariik, Ariik Dut, Khamis Emmanuel
+  </div>
 
-    <section id="comment">
-        <h2>Comments</h2>
-        <form id="commentForm" method="POST" action="submit_comment.php">
-            <textarea name="comment" placeholder="Leave your comment here..." required></textarea>
-            <button type="submit">Submit</button>
-        </form>
-        <div id="comments-section">
-            <h3>Previous Comments</h3>
-            <?php
-                $comments = @file_get_contents("comments.txt");
-                if ($comments) {
-                    echo nl2br(htmlspecialchars($comments));
-                } else {
-                    echo "<p>No comments yet.</p>";
-                }
-            ?>
-        </div>
-    </section>
+  <a aria-label="Github Repository" class="github-icon" href="https://github.com/Ganomanut/Updated-AI-Powered-Resume-Analyzer" target="_blank">
+    <!-- GitHub icon (Font Awesome) -->
+    <i class="fab fa-github"></i>
+  </a>
 
-    <section id="follow">
-        <h2>Follow Us</h2>
-        <div class="social-icons">
-            <a href="https://facebook.com" target="_blank">Facebook</a>
-            <a href="https://twitter.com" target="_blank">Twitter</a>
-            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-        </div>
-    </section>
+  <h2>Abstract</h2>
+  <p>This AI-powered resume analyzer parses resumes, extracts structured information, and evaluates job-fit based on NLP techniques and deep learning. It computes similarity scores between resumes and job descriptions, using semantic and statistical metrics, to enhance recruitment processes.</p>
 
-    <section id="resources">
-        <h2>Resources</h2>
-        <ul>
-            <li><a href="https://drive.google.com" target="_blank">Google Drive</a></li>
-            <li><a href="https://github.com/yourusername/ai-resume-analyzer" target="_blank">GitHub Repository</a></li>
-        </ul>
-    </section>
+  <h2>Method Overview</h2>
+  <p>The AI-Powered Resume Analyzer streamlines candidate screening by using artificial intelligence and NLP to extract key information from resumes, match qualifications against job descriptions, and generate a matching score for each applicant — helping recruiters make faster, more accurate, unbiased, and data-driven hiring decisions.</p>
 
-    <section id="demo">
-        <h2>Video Demo</h2>
-        <div class="video-container">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-        </div>
-    </section>
+  <h2>Results</h2>
 
-    <section id="description">
-        <h2>Project Description</h2>
-        <p>This platform provides a powerful backend for resume parsing and intelligent job matching. Employers and job seekers alike can benefit from the intuitive analysis and recommendations generated by the AI engine. Built with scalable components, the model supports continuous improvement and integration with job portals.</p>
-    </section>
+  <h2>Citation</h2>
+  <pre>@misc{gano2025resumeanalyzer,
+  title={AI-Powered Resume Analyzer},
+  author={James Dut, Agar Marial, Khamis Emmanuel, Ariik Ariik, Ariik Dut, Biet Puorich},
+  note={\url{https://github.com/Ganomanut/Updated-AI-Powered-Resume-Analyzer}},
+}</pre>
 
-    <footer>
-        <p>Acknowledgement: We thank the <strong>University of Juba</strong>, especially the <strong>School of Computer Science and Information Technology (IT)</strong> for their support and inspiration throughout this project.</p>
-    </footer>
+  <h2>References</h2>
+  <p>Resume-Screening-App. (2023, 2 1). 611noorsaeed.Retrieved 5 18, 2024, from <a href="https://github.com/611noorsaeed/Resume-Screening-App/tree/main" target="_blank">https://github.com/611noorsaeed/Resume-Screening-App/tree/main</a></p>
+
+  <!-- Font Awesome for GitHub icon -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
 </body>
 </html>
